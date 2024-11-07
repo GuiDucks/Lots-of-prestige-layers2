@@ -1,0 +1,223 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    user-select:none;
+}
+body{
+    background-color: rgb(180,255,255);
+}
+#LevelStroke {
+    width: 75%;
+    height: 30px;
+    border: 4px solid;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: all;
+    position: relative;
+}
+
+#LevelBG {
+    width: 0%;
+    height: 100%;
+    border-radius: 0.35rem;
+    background-color: rgb(0, 200, 0);
+    z-index: 1;
+    position: absolute;
+    transition: all 150ms;
+}
+
+#xpLabel, #lvlLabel {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 170%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    transition: all;
+    white-space: pre-wrap;
+}
+
+#ttlXpLabel {
+    position: absolute;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 170%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    top: 60px;
+    white-space: pre-wrap;
+}
+
+#lvlXpLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 170%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    z-index: 2;
+    white-space: pre-wrap;
+}
+
+.Reset {
+    position: absolute;
+    width: 300px;
+    margin: 5px;
+    padding: 10px;
+    box-sizing:border-box;
+    border: 7px solid;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: 1000;
+    z-index: 2;
+    font-size: 1.3em;
+}
+
+.ResetButton {
+    width: 80%;
+    height: auto;
+    min-height: 40px;
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    z-index: 2;
+    background-color: rgb(47, 255, 57);
+    border: 3px solid;
+    border-radius: 3px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.ResetButton:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.ResetButton.green {
+    background-color: rgb(0, 255, 0);
+}
+.ResetButton.red {
+    background-color: rgb(255, 70, 70);
+}
+.Title {
+    font-size: 2.13em;
+}
+.Desc {
+    margin-top: 2px;
+    font-size: 0.8em;
+    line-height: 0.8em;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    white-space: pre-wrap;
+}
+.Boosts {
+    margin-top: 2px;
+    font-size: 0.8em;
+    line-height: 0.9em;
+    white-space: pre-wrap;
+}
+.Resets {
+    position: relative;
+    width: 500px;
+    height: 1280px;
+}
+#PrestigeDiv{
+    top: 50px;
+    left: 0px;
+    background-color: aqua;
+}
+#LeavesDiv{
+    top: 50px;
+    left: 320px;
+    background-color: green;
+}
+#FireDiv{
+    top: 50px;
+    left: 640px;
+    background-color: rgb(255,90,0);
+}
+#EnergyDiv{
+    top: 50px;
+    left: 960px;
+    background-color: rgb(255,255,0);
+}
+#SteelDiv{
+    top: 300px;
+    left: 0px;
+    background-color: rgb(150,150,150);
+}
+#LavaDiv{
+    top: 300px;
+    left: 320px;
+    background-color: rgb(255,0,0);
+}
+#LightDiv{
+    top: 300px;
+    left: 640px;
+    background-color: rgb(255,255,255);
+}
+#DarknessDiv{
+    top: 300px;
+    left: 960px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    border-color: rgb(0,0,0);
+}
+#DucksDiv{
+    top: 550px;
+    left: 0px;
+    background-color: rgb(255,255,0);
+}
+#DarkMatterDiv{
+    top: 550px;
+    left: 320px;
+    background-color: rgb(100,0,255);
+}
+#AtomsDiv{
+    top: 550px;
+    left: 640px;
+    background-color: rgb(0, 255, 65);
+}
+#MagicDiv{
+    top: 550px;
+    left: 960px;
+    background-color: rgb(0, 0, 255);
+}
+#PoisonDiv{
+    top: 800px;
+    left: 0px;
+    background-color: rgb(0, 255, 0);
+}
+#CrystalDiv{
+    top: 800px;
+    left: 320px;
+    background-color: rgb(255,50,150);
+}
+#WaterDiv{
+    top: 800px;
+    left: 640px;
+    background-color: rgb(0, 100, 255);
+}
+#ObsidianDiv{
+    top: 800px;
+    left: 960px;
+    background-color: rgb(50, 0, 100);
+}
+#FrostGemsDiv{
+    top: 1050px;
+    left: 0px;
+    background-color: rgb(180,255,255);
+}
+#EntropyDiv{
+    top: 1050px;
+    left: 320px;
+    background-color: rgb(150,150,255);
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="LevelStroke">
+        <div id="LevelBG"></div>
+        <label id="lvlXpLabel">10XP</label>
+    </div>
+    <label id="lvlLabel">Level: 1</label>
+    <label id="ttlXpLabel">0 Total XP</label>
+    <div class="Resets">
+        <div class="Reset" id="PrestigeDiv">
+            <div class="Title" id="PresTitle">Prestige</div>
+            <div class="Desc" id="PresDesc">You have 0 PPts</div>
+            <div class="Boosts" id="PresBoosts">Boosts XP by x1</div>
+            <button class="ResetButton" id="PresButton" onclick="Prestige()">Level 5 Required</button>
+        </div>
+        <div class="Reset" id="LeavesDiv">
+            <div class="Title" id="LeavesTitle">Leaves</div>
+            <div class="Desc" id="LeavesDesc">You have 0 Leaves</div>
+            <div class="Boosts" id="LeavesBoosts">Boosts XP by x1</div>
+            <button class="ResetButton" id="LeavesButton" onclick="Leaves()">100 PPts Required</button>
+        </div>
+        <div class="Reset" id="FireDiv">
+            <div class="Title" id="FireDiv">Fire</div>
+            <div class="Desc" id="FireDesc">You have 0 Fire</div>
+            <div class="Boosts" id="FireBoosts">Boosts XP by x1</div>
+            <button class="ResetButton" id="FireButton" onclick="Fire()">500 Leaves Required</button>
+        </div>
+        <div class="Reset" id="EnergyDiv">
+            <div class="Title" id="EnergyDiv">Energy</div>
+            <div class="Desc" id="EnergyDesc">You have 0 Energy</div>
+            <div class="Boosts" id="EnergyBoosts">Boosts PPts by x1</div>
+            <button class="ResetButton" id="EnergyButton" onclick="Energy()">10,000 Fire Required</button>
+        </div>
+        <div class="Reset" id="SteelDiv">
+            <div class="Title" id="SteelDiv">Steel</div>
+            <div class="Desc" id="SteelDesc">You have 0 Steel</div>
+            <div class="Boosts" id="SteelBoosts">Boosts Leaves by x1</div>
+            <button class="ResetButton" id="SteelButton" onclick="Steel()">100 Energy Required</button>
+        </div>
+        <div class="Reset" id="LavaDiv">
+            <div class="Title" id="LavaDiv">Lava</div>
+            <div class="Desc" id="LavaDesc">You have 0 Lava</div>
+            <div class="Boosts" id="LavaBoosts">Boosts XP by x1</div>
+            <button class="ResetButton" id="LavaButton" onclick="Lava()">5,000 Steel Required</button>
+        </div>
+        <div class="Reset" id="LightDiv">
+            <div class="Title" id="LightDiv">Light</div>
+            <div class="Desc" id="LightDesc">You have 0 Light</div>
+            <div class="Boosts" id="LightBoosts">Boosts Fire by x1</div>
+            <button class="ResetButton" id="LightButton" onclick="Light()">75 Lava Required</button>
+        </div>
+        <div class="Reset" id="DarknessDiv">
+            <div class="Title" id="DarknessDiv">Darkness</div>
+            <div class="Desc" id="DarknessDesc">You have 0 Darkness</div>
+            <div class="Boosts" id="DarknessBoosts">Boosts Leaves by x1</div>
+            <button class="ResetButton" id="DarknessButton" onclick="Dark()">4,000 Light Required</button>
+        </div>
+        <div class="Reset" id="DucksDiv">
+            <div class="Title" id="DucksDiv">Ducks</div>
+            <div class="Desc" id="DucksDesc">You have 0 Ducks</div>
+            <div class="Boosts" id="DucksBoosts">Boosts Steel by x1</div>
+            <button class="ResetButton" id="DucksButton" onclick="Duck()">60 Darkness Required</button>
+        </div>
+        <div class="Reset" id="DarkMatterDiv">
+            <div class="Title" id="DarkMatterDiv">DarkMatter</div>
+            <div class="Desc" id="DarkMatterDesc">You have 0 Dark Matter</div>
+            <div class="Boosts" id="DarkMatterBoosts">Boosts Lava by x1</div>
+            <button class="ResetButton" id="DarkMatterButton" onclick="DM()">10,000 Dark Matter Required</button>
+        </div>
+        <div class="Reset" id="AtomsDiv">
+            <div class="Title" id="AtomsDiv">Atoms</div>
+            <div class="Desc" id="AtomsDesc">You have 0 Dark Matter</div>
+            <div class="Boosts" id="AtomsBoosts">Boosts Energy by x1</div>
+            <button class="ResetButton" id="AtomsButton" onclick="Atoms()">250 Dark Matter Required</button>
+        </div>
+        <div class="Reset" id="MagicDiv">
+            <div class="Title" id="MagicDiv">Magic</div>
+            <div class="Desc" id="MagicDesc">You have 0 Magic</div>
+            <div class="Boosts" id="MagicBoosts">Boosts Dark Matter by x1</div>
+            <button class="ResetButton" id="MagicButton" onclick="Magic()">250 Atoms Required</button>
+        </div>
+        <div class="Reset" id="PoisonDiv">
+            <div class="Title" id="PoisonDiv">Poison</div>
+            <div class="Desc" id="PoisonDesc">You have 0 Poison</div>
+            <div class="Boosts" id="PoisonBoosts">Boosts Ducks by x1</div>
+            <button class="ResetButton" id="PoisonButton" onclick="Poison()">1,000 Atoms Required</button>
+        </div>
+        <div class="Reset" id="CrystalDiv">
+            <div class="Title" id="CrystalDiv">Crystals</div>
+            <div class="Desc" id="CrystalDesc">You have 0 Crystals</div>
+            <div class="Boosts" id="CrystalBoosts">Boosts Atoms by x1</div>
+            <button class="ResetButton" id="CrystalButton" onclick="Crystal()">250 Poison Required</button>
+        </div>
+        <div class="Reset" id="WaterDiv">
+            <div class="Title" id="WaterDiv">Water</div>
+            <div class="Desc" id="WaterDesc">You have 0 Water</div>
+            <div class="Boosts" id="WaterBoosts">Boosts Poison by x1</div>
+            <button class="ResetButton" id="WaterButton" onclick="Water()">150 Crystals Required</button>
+        </div>
+        <div class="Reset" id="ObsidianDiv">
+            <div class="Title" id="ObsidianDiv">Obsidian</div>
+            <div class="Desc" id="ObsidianDesc">You have 0 Obsidian</div>
+            <div class="Boosts" id="ObsidianBoosts">Boosts Magic by x1</div>
+            <button class="ResetButton" id="ObsidianButton" onclick="Obsidian()">300 Water Required</button>
+        </div>
+        <div class="Reset" id="FrostGemsDiv">
+            <div class="Title" id="FrostGemsDiv">Frost Gems</div>
+            <div class="Desc" id="FrostGemsDesc">You have 0 Frost Gems</div>
+            <div class="Boosts" id="FrostGemsBoosts">Boosts Water by x1</div>
+            <button class="ResetButton" id="FrostGemsButton" onclick="FrostGems()">50 Obsidian Required</button>
+        </div>
+        <div class="Reset" id="EntropyDiv">
+            <div class="Title" id="EntropyDiv">Entropy</div>
+            <div class="Desc" id="EntropyDesc">You have 0 Entropy</div>
+            <div class="Boosts" id="EntropyBoosts">Boosts Frost Gems by x1</div>
+            <button class="ResetButton" id="EntropyButton" onclick="Entropy()">100,000 Frost Gems Required</button>
+        </div>
+    </div>
+    <script src="break_eternity.js-master/break_eternity.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
