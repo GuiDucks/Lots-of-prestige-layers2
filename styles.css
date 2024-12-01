@@ -5,32 +5,50 @@
 }
 body{
     background-color: rgb(180,255,255);
+    transition: all 0.3s;
 }
-#LevelStroke {
-    width: 75%;
-    height: 30px;
+
+#TierStroke{
+    position: absolute;
+    width: 1200px;
+    margin-left: 30px;
     border: 4px solid;
+    height: 40px;
     border-radius: 10px;
     text-align: center;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    transition: all;
+    margin-top: 1350px;
+}
+#LevelStroke {
+    width: 1200px;
+    margin-left: 30px;
+    border: 4px solid;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 50px;
     transition: all;
     position: relative;
 }
-
-#LevelBG {
+#LevelBG,#TierBG {
     width: 0%;
     height: 100%;
     border-radius: 0.35rem;
     background-color: rgb(0, 200, 0);
     z-index: 1;
     position: absolute;
-    transition: all 150ms;
+    transition: all 100ms;
+}
+#LevelBG{
+    background-image: linear-gradient(rgb(0,255,0), rgb(0,185,0));
+}
+#TierBG{
+    background-image: linear-gradient(rgb(0,100,255), rgb(0,0,255));
+    width: 50%;
 }
 
-#xpLabel, #lvlLabel {
+#xpLabel, #lvlLabel,#tierTpLabel,#tierLabel {
     text-align: center;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 170%;
@@ -38,6 +56,20 @@ body{
     font-weight: 1000;
     transition: all;
     white-space: pre-wrap;
+    position: relative;
+    z-index: 2;
+}
+#lvlLabel,#tierLabel {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 1250px;
+    font-size: 170%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    transition: all;
+    white-space: pre-wrap;
+    position: absolute;
 }
 
 #ttlXpLabel {
@@ -49,10 +81,14 @@ body{
     font-size: 170%;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 1000;
-    top: 60px;
+    top: 80px;
     white-space: pre-wrap;
+    width: 1000px;
 }
-
+#tierLabel{
+    position: absolute;
+    margin-top: 1390px;
+}
 #lvlXpLabel {
     position: absolute;
     top: 50%;
@@ -77,9 +113,24 @@ body{
     font-weight: 1000;
     z-index: 2;
     font-size: 1.3em;
+    box-shadow: 15px 15px 20px 0px rgba(0,0,0,0.75);
+}
+.Upgrade {
+    position: absolute;
+    width: 400px;
+    margin: 5px;
+    padding: 10px;
+    box-sizing:border-box;
+    border: 7px solid;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: 1000;
+    z-index: 2;
+    font-size: 1.3em;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
 }
 
-.ResetButton {
+.ResetButton,.UpgradeButton {
     width: 80%;
     height: auto;
     min-height: 40px;
@@ -96,20 +147,44 @@ body{
     overflow-wrap: break-word;
     white-space: pre-wrap;
 }
-
-.ResetButton:hover {
-    transform: scale(1.3);
+#SCStartButton {
+    width: 1000px;
+    height: 40px;
+    margin-top: 60px;
+    margin-left: 130px;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    background-image: linear-gradient(rgb(0,255,0), rgb(0,185,0));
+    border: 3px solid;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+#SCStartButton:hover{
+    transform:scale(1.1);
     cursor: pointer;
 }
 
-.ResetButton.green {
-    background-color: rgb(0, 255, 0);
+.ResetButton:hover,.UpgradeButton:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+    box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.75);
+    rotate: 1deg;
 }
-.ResetButton.red {
-    background-color: rgb(255, 70, 70);
+
+.ResetButton.green,.UpgradeButton.green {
+    /*background-color: rgb(0, 255, 0);*/
+    background-image: linear-gradient(rgb(0,255,0), rgb(0,155,0));
+}
+.ResetButton.red,.UpgradeButton.red {
+    /*background-color: rgb(255, 70, 70);*/
+    background-image: linear-gradient(rgb(255,0,0), rgb(155,0,0));
 }
 .Title {
-    font-size: 2.13em;
+    font-size: 1.9em;
+    white-space: nowrap;
 }
 .Desc {
     margin-top: 2px;
@@ -130,94 +205,209 @@ body{
     height: 1280px;
 }
 #PrestigeDiv{
-    top: 50px;
+    top: 110px;
     left: 0px;
     background-color: aqua;
 }
 #LeavesDiv{
-    top: 50px;
+    top: 110px;
     left: 320px;
     background-color: green;
 }
 #FireDiv{
-    top: 50px;
+    top: 110px;
     left: 640px;
     background-color: rgb(255,90,0);
 }
 #EnergyDiv{
-    top: 50px;
+    top: 110px;
     left: 960px;
     background-color: rgb(255,255,0);
 }
 #SteelDiv{
-    top: 300px;
+    top: 360px;
     left: 0px;
     background-color: rgb(150,150,150);
 }
 #LavaDiv{
-    top: 300px;
+    top: 360px;
     left: 320px;
     background-color: rgb(255,0,0);
 }
 #LightDiv{
-    top: 300px;
+    top: 360px;
     left: 640px;
     background-color: rgb(255,255,255);
+    box-shadow: 0px 0px 15px 15px rgba(255,255,255);
 }
 #DarknessDiv{
-    top: 300px;
+    top: 360px;
     left: 960px;
     background-color: rgb(0, 0, 0);
-    color: aliceblue;
+    color: white;
     border-color: rgb(0,0,0);
+    box-shadow: 0px 0px 20px 7px rgba(0,0,0);
 }
 #DucksDiv{
-    top: 550px;
+    top: 610px;
     left: 0px;
     background-color: rgb(255,255,0);
 }
 #DarkMatterDiv{
-    top: 550px;
+    top: 610px;
     left: 320px;
     background-color: rgb(100,0,255);
 }
 #AtomsDiv{
-    top: 550px;
+    top: 610px;
     left: 640px;
     background-color: rgb(0, 255, 65);
 }
 #MagicDiv{
-    top: 550px;
+    top: 610px;
     left: 960px;
     background-color: rgb(0, 0, 255);
 }
 #PoisonDiv{
-    top: 800px;
+    top: 860px;
     left: 0px;
     background-color: rgb(0, 255, 0);
 }
 #CrystalDiv{
-    top: 800px;
+    top: 860px;
     left: 320px;
     background-color: rgb(255,50,150);
 }
 #WaterDiv{
-    top: 800px;
+    top: 860px;
     left: 640px;
     background-color: rgb(0, 100, 255);
 }
 #ObsidianDiv{
-    top: 800px;
+    top: 860px;
     left: 960px;
-    background-color: rgb(50, 0, 100);
+    background-color: rgb(80, 0, 160);
 }
 #FrostGemsDiv{
-    top: 1050px;
+    top: 1110px;
     left: 0px;
     background-color: rgb(180,255,255);
 }
 #EntropyDiv{
-    top: 1050px;
+    top: 1110px;
     left: 320px;
     background-color: rgb(150,150,255);
+}
+#RiftDiv{
+    top: 1110px;
+    left: 640px;
+    background-color: rgb(150,0,0);
+    box-shadow: 0px 0px 23px 10px rgba(155,0,0);
+}
+#UpgOpenDiv{
+    top: 1110px;
+    left: 960px;
+    background-image: linear-gradient(rgb(0,0,255), rgb(100,0,255));
+}
+#MultiShardUpgrade{
+    top: 150px;
+    left: 450px;
+    background-color: rgb(150,0,0);
+}
+#EntropyBoostUpgrade{
+    top: 150px;
+    left: 900px;
+    background-color: rgb(150,150,255);
+}
+#PlasmaTPUpgrade{
+    top: 350px;
+    left: 0px;
+    background-color: rgb(0,255,255);
+}
+#PTPTitle{
+    font-size: 1.5em;
+}
+#PlasmaShardsUpgrade{
+    top: 350px;
+    left: 450px;
+    background-image: linear-gradient(rgb(0,255,255),rgb(155,0,0));
+}
+#TimeUpgrade{
+    top: 350px;
+    left: 900px;
+    background-color: rgb(255,255,255);
+}
+#TimeTPUpgrade{
+    top: 570px;
+    left: 0px;
+    background-color: rgb(140,140,255);
+}
+#StardustRecoveryUpgrade{
+    top: 570px;
+    left: 450px;
+    background-color: rgb(75, 75, 199);
+}
+#QuarkGenUpgrade{
+    top: 570px;
+    left: 900px;
+    background-image: linear-gradient(rgb(0,255,255),rgb(0,255,0));
+}
+#PlasmaBoosterUpgrade{
+    top: 820px;
+    left: 0px;
+    background-image: linear-gradient(rgb(0,255,255),rgb(100,100,255));
+}
+#QuarkBoosterUpgrade{
+    top: 820px;
+    left: 450px;
+    background-image: linear-gradient(rgb(255,0,0),rgb(0,0,255));
+}
+#SRTitle{
+    font-size: 1.7em;
+}
+#UpgCloseDiv{
+    top: 150px;
+    left: 0px;
+    background-color: rgb(180,255,255);
+}
+#PlasmaDiv{
+    top: 1430px;
+    left: 0px;
+    background-color: rgb(0, 255, 255);
+    box-shadow: 0px 0px 23px 10px rgba(0,255,255);
+}
+#TimeDiv{
+    top: 1430px;
+    left: 320px;
+    background-color: rgb(255, 255, 255);
+}
+#StardustDiv{
+    top: 1430px;
+    left: 640px;
+    background-image: linear-gradient(rgb(100, 0, 255),rgb(0,0,255));
+    box-shadow: 0px 0px 23px 10px rgba(50,0,255);
+}
+#QuarksDiv{
+    top: 1430px;
+    left: 960px;
+    background-image: linear-gradient(rgb(255, 0, 0),rgb(0,255,0));
+    box-shadow: 0px 0px 23px 10px rgba(255,0,0);
+}
+#FermionDiv{
+    top: 1650px;
+    left: 0px;
+    background-image: linear-gradient(rgb(0, 255, 0),rgb(0,0,255));
+    box-shadow: 0px 0px 23px 10px rgba(0,0,255);
+}
+#StarsDiv{
+    top: 1650px;
+    left: 320px;
+    background-image: linear-gradient(rgb(255, 0, 0),rgb(255,255,0));
+    box-shadow: 0px 0px 23px 10px rgba(255,0,0);
+}
+#QuasarDiv{
+    top: 1650px;
+    left: 640px;
+    background-image: linear-gradient(rgb(0, 255, 0),rgb(0,0,0));
+    box-shadow: 0px 0px 23px 10px rgba(0,255,0);
 }

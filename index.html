@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
+    <title>Layers</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id = "body">
     <div id="LevelStroke">
         <div id="LevelBG"></div>
         <label id="lvlXpLabel">10XP</label>
     </div>
     <label id="lvlLabel">Level: 1</label>
     <label id="ttlXpLabel">0 Total XP</label>
-    <div class="Resets">
+    <button class="Button" id="SCStartButton" onclick="ChangeSCStart()">Scientific notation starts at 1e303 (1Ce)</button>
+    <div id = "Resets" class="Resets">
         <div class="Reset" id="PrestigeDiv">
             <div class="Title" id="PresTitle">Prestige</div>
             <div class="Desc" id="PresDesc">You have 0 PPts</div>
@@ -27,100 +28,213 @@
             <button class="ResetButton" id="LeavesButton" onclick="Leaves()">100 PPts Required</button>
         </div>
         <div class="Reset" id="FireDiv">
-            <div class="Title" id="FireDiv">Fire</div>
+            <div class="Title" id="FireTitle">Fire</div>
             <div class="Desc" id="FireDesc">You have 0 Fire</div>
             <div class="Boosts" id="FireBoosts">Boosts XP by x1</div>
             <button class="ResetButton" id="FireButton" onclick="Fire()">500 Leaves Required</button>
         </div>
         <div class="Reset" id="EnergyDiv">
-            <div class="Title" id="EnergyDiv">Energy</div>
+            <div class="Title" id="EnergyTitle">Energy</div>
             <div class="Desc" id="EnergyDesc">You have 0 Energy</div>
             <div class="Boosts" id="EnergyBoosts">Boosts PPts by x1</div>
             <button class="ResetButton" id="EnergyButton" onclick="Energy()">10,000 Fire Required</button>
         </div>
         <div class="Reset" id="SteelDiv">
-            <div class="Title" id="SteelDiv">Steel</div>
+            <div class="Title" id="SteelTitle">Steel</div>
             <div class="Desc" id="SteelDesc">You have 0 Steel</div>
             <div class="Boosts" id="SteelBoosts">Boosts Leaves by x1</div>
             <button class="ResetButton" id="SteelButton" onclick="Steel()">100 Energy Required</button>
         </div>
         <div class="Reset" id="LavaDiv">
-            <div class="Title" id="LavaDiv">Lava</div>
+            <div class="Title" id="LavaTitle">Lava</div>
             <div class="Desc" id="LavaDesc">You have 0 Lava</div>
             <div class="Boosts" id="LavaBoosts">Boosts XP by x1</div>
             <button class="ResetButton" id="LavaButton" onclick="Lava()">5,000 Steel Required</button>
         </div>
         <div class="Reset" id="LightDiv">
-            <div class="Title" id="LightDiv">Light</div>
+            <div class="Title" id="LightTitle">Light</div>
             <div class="Desc" id="LightDesc">You have 0 Light</div>
             <div class="Boosts" id="LightBoosts">Boosts Fire by x1</div>
             <button class="ResetButton" id="LightButton" onclick="Light()">75 Lava Required</button>
         </div>
         <div class="Reset" id="DarknessDiv">
-            <div class="Title" id="DarknessDiv">Darkness</div>
+            <div class="Title" id="DarknessTitle">Darkness</div>
             <div class="Desc" id="DarknessDesc">You have 0 Darkness</div>
             <div class="Boosts" id="DarknessBoosts">Boosts Leaves by x1</div>
             <button class="ResetButton" id="DarknessButton" onclick="Dark()">4,000 Light Required</button>
         </div>
         <div class="Reset" id="DucksDiv">
-            <div class="Title" id="DucksDiv">Ducks</div>
+            <div class="Title" id="DucksTitle">Ducks</div>
             <div class="Desc" id="DucksDesc">You have 0 Ducks</div>
             <div class="Boosts" id="DucksBoosts">Boosts Steel by x1</div>
             <button class="ResetButton" id="DucksButton" onclick="Duck()">60 Darkness Required</button>
         </div>
         <div class="Reset" id="DarkMatterDiv">
-            <div class="Title" id="DarkMatterDiv">DarkMatter</div>
+            <div class="Title" id="DarkMatterTitle">Dark Matter</div>
             <div class="Desc" id="DarkMatterDesc">You have 0 Dark Matter</div>
             <div class="Boosts" id="DarkMatterBoosts">Boosts Lava by x1</div>
             <button class="ResetButton" id="DarkMatterButton" onclick="DM()">10,000 Dark Matter Required</button>
         </div>
         <div class="Reset" id="AtomsDiv">
-            <div class="Title" id="AtomsDiv">Atoms</div>
+            <div class="Title" id="AtomsTitle">Atoms</div>
             <div class="Desc" id="AtomsDesc">You have 0 Dark Matter</div>
             <div class="Boosts" id="AtomsBoosts">Boosts Energy by x1</div>
             <button class="ResetButton" id="AtomsButton" onclick="Atoms()">250 Dark Matter Required</button>
         </div>
         <div class="Reset" id="MagicDiv">
-            <div class="Title" id="MagicDiv">Magic</div>
+            <div class="Title" id="MagicTitle">Magic</div>
             <div class="Desc" id="MagicDesc">You have 0 Magic</div>
             <div class="Boosts" id="MagicBoosts">Boosts Dark Matter by x1</div>
             <button class="ResetButton" id="MagicButton" onclick="Magic()">250 Atoms Required</button>
         </div>
         <div class="Reset" id="PoisonDiv">
-            <div class="Title" id="PoisonDiv">Poison</div>
+            <div class="Title" id="PoisonTitle">Poison</div>
             <div class="Desc" id="PoisonDesc">You have 0 Poison</div>
             <div class="Boosts" id="PoisonBoosts">Boosts Ducks by x1</div>
             <button class="ResetButton" id="PoisonButton" onclick="Poison()">1,000 Atoms Required</button>
         </div>
         <div class="Reset" id="CrystalDiv">
-            <div class="Title" id="CrystalDiv">Crystals</div>
+            <div class="Title" id="CrystalTitle">Crystals</div>
             <div class="Desc" id="CrystalDesc">You have 0 Crystals</div>
             <div class="Boosts" id="CrystalBoosts">Boosts Atoms by x1</div>
             <button class="ResetButton" id="CrystalButton" onclick="Crystal()">250 Poison Required</button>
         </div>
         <div class="Reset" id="WaterDiv">
-            <div class="Title" id="WaterDiv">Water</div>
+            <div class="Title" id="WaterTitle">Water</div>
             <div class="Desc" id="WaterDesc">You have 0 Water</div>
             <div class="Boosts" id="WaterBoosts">Boosts Poison by x1</div>
             <button class="ResetButton" id="WaterButton" onclick="Water()">150 Crystals Required</button>
         </div>
         <div class="Reset" id="ObsidianDiv">
-            <div class="Title" id="ObsidianDiv">Obsidian</div>
+            <div class="Title" id="ObsidianTitle">Obsidian</div>
             <div class="Desc" id="ObsidianDesc">You have 0 Obsidian</div>
             <div class="Boosts" id="ObsidianBoosts">Boosts Magic by x1</div>
             <button class="ResetButton" id="ObsidianButton" onclick="Obsidian()">300 Water Required</button>
         </div>
         <div class="Reset" id="FrostGemsDiv">
-            <div class="Title" id="FrostGemsDiv">Frost Gems</div>
+            <div class="Title" id="FrostGemsTitle">Frost Gems</div>
             <div class="Desc" id="FrostGemsDesc">You have 0 Frost Gems</div>
             <div class="Boosts" id="FrostGemsBoosts">Boosts Water by x1</div>
             <button class="ResetButton" id="FrostGemsButton" onclick="FrostGems()">50 Obsidian Required</button>
         </div>
         <div class="Reset" id="EntropyDiv">
-            <div class="Title" id="EntropyDiv">Entropy</div>
+            <div class="Title" id="EntropyTitle">Entropy</div>
             <div class="Desc" id="EntropyDesc">You have 0 Entropy</div>
             <div class="Boosts" id="EntropyBoosts">Boosts Frost Gems by x1</div>
             <button class="ResetButton" id="EntropyButton" onclick="Entropy()">100,000 Frost Gems Required</button>
+        </div>
+        <div class="Reset" id="RiftDiv">
+            <div class="Title" id="RiftTitle">Rift</div>
+            <div class="Desc" id="RiftDesc">You have 0 Shards</div>
+            <div class="Boosts" id="RiftBoosts">Boosts TP by x1</div>
+            <button class="ResetButton" id="RiftButton" onclick="Rift()">7,500 Entropy Required</button>
+        </div>
+        <div class="Reset" id="UpgOpenDiv">
+            <div class="Title" id="UpgOpenTitle">Upgrades</div>
+            <button class="ResetButton" id="UpgOpenButton" onclick="SwitchTab(1)">4 Shards required</button>
+        </div>
+        <div id="TierStroke">
+            <div id="TierBG"></div>
+            <label id="tierTpLabel">0 / 2 TP</label>
+        </div>
+        <label id="tierLabel">Tier 1 (boosts XP by ^1)</label>
+        <div class="Reset" id="PlasmaDiv">
+            <div class="Title" id="PlasmaTitle">Plasma</div>
+            <div class="Desc" id="PlasmaDesc">You have 0 Plasma</div>
+            <div class="Boosts" id="PlasmaBoosts">Boosts Entropy by ^1</div>
+            <button class="ResetButton" id="PlasmaButton" onclick="Plasma()">130 Shards required</button>
+        </div>
+        <div class="Reset" id="TimeDiv">
+            <div class="Title" id="TimeTitle">Time</div>
+            <div class="Desc" id="TimeDesc">You have 0s of Time</div>
+            <div class="Boosts" id="TimeBoosts">Boosts TP by x1</div>
+            <button class="ResetButton" id="TimeButton" onclick="Time()">250 Plasma required</button>
+        </div>
+        <div class="Reset" id="StardustDiv">
+            <div class="Title" id="StardustTitle">Stardust</div>
+            <div class="Desc" id="StardustDesc">You have 0 Stardust</div>
+            <div class="Boosts" id="StardustBoosts">Boosts Shards by x1 and generates shards</div>
+            <button class="ResetButton" id="StardustButton" onclick="Stardust()">150,000s of time required</button>
+        </div>
+        <div class="Reset" id="QuarksDiv">
+            <div class="Title" id="QuarksTitle">Quarks</div>
+            <div class="Desc" id="QuarksDesc">You have 0 Quarks</div>
+            <div class="Boosts" id="QuarksBoosts">Boosts Plasma by x1</div>
+            <button class="ResetButton" id="QuarksButton" onclick="Quarks()">2,000 Stardust required</button>
+        </div>
+        <div class="Reset" id="FermionDiv">
+            <div class="Title" id="FermionTitle">Fermions</div>
+            <div class="Desc" id="FermionDesc">You have 0 Fermions</div>
+            <div class="Boosts" id="FermionBoosts">Boosts Shards by x1</div>
+            <button class="ResetButton" id="FermionButton" onclick="Fermions()">100 Quarks required</button>
+        </div>
+        <div class="Reset" id="StarsDiv">
+            <div class="Title" id="StarsTitle">Stars</div>
+            <div class="Desc" id="StarsDesc">You have 0 Stars</div>
+            <div class="Boosts" id="StarsBoosts">Boosts Stardust by x1</div>
+            <button class="ResetButton" id="StarsButton" onclick="Stars()">500 Fermions required</button>
+        </div>
+        <div class="Reset" id="QuasarDiv">
+            <div class="Title" id="QuasarTitle">Quasars</div>
+            <div class="Desc" id="QuasarDesc">You have 0 Quasars</div>
+            <div class="Boosts" id="QuasarBoosts">Boosts Plasma by x1</div>
+            <button class="ResetButton" id="QuasarButton" onclick="Quasar()">400 Stars required</button>
+        </div>
+    </div>
+    <div id = "Upgrades" class = "Upgrades" style="display: none;">
+        <div class="Upgrade" id="UpgCloseDiv">
+            <div class="Title" id="UpgCloseTitle">Layers</div>
+            <button class="UpgradeButton" id="UpgOpenButton" onclick="SwitchTab(0)">Go back</button>
+        </div>
+        <div class="Upgrade" id="MultiShardUpgrade">
+            <div class="Title" id="MSTitle">Multi Shards</div>
+            <div class="Desc" id="MSDesc">Allows you to earn multiple shards upon entering the rift</div>
+            <button class="UpgradeButton" id="MSButton" onclick="BuyUpg(1)">4 Shards required</button>
+        </div>
+        <div class="Upgrade" id="EntropyBoostUpgrade">
+            <div class="Title" id="EBTitle">More entropy</div>
+            <div class="Desc" id="EBDesc">You earn much more entropy</div>
+            <button class="UpgradeButton" id="EBButton" onclick="BuyUpg(2)">25 Shards required</button>
+        </div>
+        <div class="Upgrade" id="PlasmaTPUpgrade">
+            <div class="Title" id="PTPTitle">Plasma Tier Progress</div>
+            <div class="Desc" id="PTPDesc">TP gets a boost based on Plasma</div>
+            <button class="UpgradeButton" id="PTPButton" onclick="BuyUpg(3)">2 Plasma required</button>
+        </div>
+        <div class="Upgrade" id="PlasmaShardsUpgrade">
+            <div class="Title" id="PSTitle">Plasma shards</div>
+            <div class="Desc" id="PSDesc">Shards gain is squared, and keep darkness on shard resets</div>
+            <button class="UpgradeButton" id="PSButton" onclick="BuyUpg(4)">3 Plasma required</button>
+        </div>
+        <div class="Upgrade" id="TimeUpgrade">
+            <div class="Title" id="TUpTitle">Timed Boost</div>
+            <div class="Desc" id="TUpDesc">Keep poison on rift resets, and the boost from "Plasma Tier Progress" is stronger</div>
+            <button class="UpgradeButton" id="TUpButton" onclick="BuyUpg(5)">1,000s of time required</button>
+        </div>
+        <div class="Upgrade" id="TimeTPUpgrade">
+            <div class="Title" id="TTPTitle">Stronger Time</div>
+            <div class="Desc" id="TTPDesc">You can now generate Entropy, Frost gems and obsidian and time's boost to TP is way stronger</div>
+            <button class="UpgradeButton" id="TTPButton" onclick="BuyUpg(6)">10,000s of time required</button>
+        </div>
+        <div class="Upgrade" id="StardustRecoveryUpgrade">
+            <div class="Title" id="SRTitle">Stardust recovery</div>
+            <div class="Desc" id="SRDesc">Keep water on rift resets</div>
+            <button class="UpgradeButton" id="SRButton" onclick="BuyUpg(7)">100 Stardust required</button>
+        </div>
+        <div class="Upgrade" id="QuarkGenUpgrade">
+            <div class="Title" id="QGTitle">Plasma Generator</div>
+            <div class="Desc" id="QGDesc">Generate 100% of your plasma gained on reset each second</div>
+            <button class="UpgradeButton" id="QGButton" onclick="BuyUpg(8)">2.5 Quarks required</button>
+        </div>
+        <div class="Upgrade" id="PlasmaBoosterUpgrade">
+            <div class="Title" id="PBTitle">Plasma Booster</div>
+            <div class="Desc" id="PBDesc">Plasma's boost to entropy is stronger</div>
+            <button class="UpgradeButton" id="PBButton" onclick="BuyUpg(9)">5 Quarks required</button>
+        </div>
+        <div class="Upgrade" id="QuarkBoosterUpgrade">
+            <div class="Title" id="QBTitle">Quark Booster</div>
+            <div class="Desc" id="QBDesc">Quark's plasma boost is stronger</div>
+            <button class="UpgradeButton" id="QBButton" onclick="BuyUpg(10)">10 Stars required</button>
         </div>
     </div>
     <script src="break_eternity.js-master/break_eternity.js"></script>
